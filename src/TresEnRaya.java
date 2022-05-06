@@ -34,13 +34,17 @@ public class TresEnRaya {
 	public boolean esMovimientoValido(int pos) {
 		return tablero[pos] == 0;
 	}
+	
+	public int generarNumeroAleatorio() {
+		return (int) Math.floor(Math.random() * 9);
+	}
 
 	public void mueveJugador1() {
-		mueveJugador1((int) Math.floor(Math.random() * 9));
+		mueveJugador1(generarNumeroAleatorio());
 	}
 
 	public void mueveJugador2() {
-		mueveJugador2((int) Math.floor(Math.random() * 9));
+		mueveJugador2(generarNumeroAleatorio());
 	}
 
 	public boolean quedanMovimientos() {
